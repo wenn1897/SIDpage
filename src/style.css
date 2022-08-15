@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5; 
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header{
+    background-color: gray;
+    color: white;
+    height: 10vh;
+}
+
+main{
+    overflow-x: hidden;
+}
+
+
+.banner img{
+    width:98%;
+    margin-left:1%;
+    margin-top: 1% ;
+}
+
+.banner h2{
+    margin:auto;
+    height:5rem;
+    line-height: 5rem;
+    color: blue;
+    text-align: center;
+}
+
+.logo-p{
+    width:100%;
+    margin: 1% 40%;
+}
+
+article{
+    margin:2%;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+article h2, article h3{
+    margin: 1rem auto;
+}
+
+aside{
+    margin:2%;
+}
+aside img{
+    margin: 1% 10%;
+}
+
+
+nav li{
+    display: inline;
+    margin: 0  3rem;
+    text-align: center;
+    line-height: 3.5rem;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.05rem;
+    color: white;
+}
+
+/*-------------------------------------------- vista somos */
+
+.somos{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    height: 100rem;
+}
+
+.somos1 h2{
+    text-align:center;
+    padding-top:2rem;
+    animation-name: equipo;
+    animation-duration:4s;
+}
+
+.target{
+    backface-visibility: hidden;
+    transition: .5s;
+
+    position: relative;
+    top:8rem;
+
+    width: 95%;
+    height: 100%;
+
+    padding: 0 1rem;
+
+    
+}
+
+.target img{
+    width: 50%;
+    margin: 1rem 3rem;
+}
+
+.target h3{
+    padding: 1rem;
+}
+
+.target div{
+    position: absolute;
+    backface-visibility: hidden;
+    transition: .5s;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.target .front{
+    display: block;
+    width: 95%;
+    padding: 0 1rem;
+    align-items: center;
+    background-color:gray;
+    transform: perspective(500px) rotateY(0deg);
+    border-radius: 0.5rem;
+}
+
+.target:hover .front{
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.target .back{
+    width: 100%;
+    align-items: center;
+    color: gray;
+    transform: perspective(500px) rotateY(180deg);
+    border-radius: 0.5rem;
+}
+
+.target:hover .back{
+    transform: perspective(500px) rotateY(360deg);
+}
+
+/*--------------footer----------------------*/
+
+footer p{
+    position: sticky;
+    bottom: 0;
+}
