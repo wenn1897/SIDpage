@@ -5,13 +5,14 @@ import Animacion from '../views/animacion/animacion'
 const content =  document.getElementById('root');
 
 
-const router =  (route) => { //esto se llama funcion flecha, lo que esta en parentesis es el parametro
+const router =  (route) => { 
     console.log(route);
     //voy a validar en que ruta esta para saber que debo mostrar
 
     content.innerHTML = '';
+
     switch (route){
-        case '#/' : 
+        case '#/home' : 
             {
                content.appendChild( Home());
             } 

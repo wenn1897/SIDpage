@@ -64,9 +64,13 @@ nav li{
     line-height: 3.5rem;
 }
 
+.logo-sid img{
+    width: 4rem;
+    height: 3rem;
+}
+
 a{
     text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.05rem;
     color: white;
 }
@@ -77,14 +81,47 @@ a{
     width:100%;
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
-    height: 100rem;
+    height: 130rem;
 }
+
+/* animacion del titulo*/ 
 
 .somos1 h2{
     text-align:center;
     padding-top:2rem;
+    margin-bottom: 4rem;
     animation-name: equipo;
     animation-duration:4s;
+    position: relative;
+    font-size: 1rem;
+}
+
+@keyframes equipo {
+    0%{
+        color: black;  
+        font-size: 1rem;
+        
+    }
+    25%{
+        color: rgba(46, 6, 33, 0.938);  
+        font-size: 1.1rem;
+        top: 0.1rem;
+    }
+    50%{
+        color: rgb(134, 10, 10);
+        font-size: 1.2rem;
+        top: 0.2rem;
+    }
+    75%{
+        color: rgb(110, 55, 9);  
+        font-size: 1.3rem;
+        top: 0.3rem;
+    }
+    100%{
+        color: rgb(204, 58, 5);
+        font-size: 1.4rem;
+        top: 0.4rem;
+    }
 }
 
 .target{
@@ -92,7 +129,6 @@ a{
     transition: .5s;
 
     position: relative;
-    top:8rem;
 
     width: 95%;
     height: 100%;
@@ -128,7 +164,9 @@ a{
     align-items: center;
     background-color:gray;
     transform: perspective(500px) rotateY(0deg);
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
+    border: 2rem gray;
+    box-shadow: 10px 5px 5px gray;
 }
 
 .target:hover .front{
@@ -141,6 +179,10 @@ a{
     color: gray;
     transform: perspective(500px) rotateY(180deg);
     border-radius: 0.5rem;
+    border: 2rem gray;
+    box-shadow: 10px 5px 5px gray;
+    font-size: 0.9rem;
+    padding: 0.9rem;
 }
 
 .target:hover .back{
