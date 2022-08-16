@@ -14,6 +14,7 @@ const router =  (route) => {
     switch (route){
         case '#/home' : 
             {
+                
                content.appendChild( Home());
             } 
         case '#/somos' : 

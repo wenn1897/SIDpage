@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 html{
@@ -56,17 +57,27 @@ aside img{
     margin: 1% 10%;
 }
 
+nav{
+    overflow-y: hidden;
+}
+
 
 nav li{
     display: inline;
     margin: 0  3rem;
     text-align: center;
-    line-height: 3.5rem;
+    line-height: 3.4rem;
+}
+
+nav li a:active{
+    color: blue;
 }
 
 .logo-sid img{
-    width: 4rem;
-    height: 3rem;
+    width: 3.6rem;
+    height: 2.5rem;
+    position: relative;
+    top:0.7rem;
 }
 
 a{
@@ -81,7 +92,7 @@ a{
     width:100%;
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
-    height: 130rem;
+    height: 165rem;
 }
 
 /* animacion del titulo*/ 
@@ -133,7 +144,8 @@ a{
     width: 95%;
     height: 100%;
 
-    padding: 0 1rem;
+    margin-left: 0.4rem;
+    overflow-y: hidden;
 
     
 }
@@ -166,7 +178,7 @@ a{
     transform: perspective(500px) rotateY(0deg);
     border-radius: 0.3rem;
     border: 2rem gray;
-    box-shadow: 10px 5px 5px gray;
+    box-shadow: 10px 5px 5px rgb(196, 192, 192);
 }
 
 .target:hover .front{
@@ -174,19 +186,62 @@ a{
 }
 
 .target .back{
-    width: 100%;
+    width: 95%;
+    height: 93%;
     align-items: center;
     color: gray;
     transform: perspective(500px) rotateY(180deg);
     border-radius: 0.5rem;
     border: 2rem gray;
-    box-shadow: 10px 5px 5px gray;
+    box-shadow: 10px 5px 5px rgb(196, 192, 192);
     font-size: 0.9rem;
     padding: 0.9rem;
 }
 
 .target:hover .back{
     transform: perspective(500px) rotateY(360deg);
+}
+
+/*---------------- ANIMACION LOADER ------------*/
+
+.animacion{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.circle{
+
+    z-index: -1;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+
+    width: 13%;
+    height: 22.5%;
+    border-radius: 5rem;
+
+    border: 17px solid #eee;
+    border-top: 17px solid rgb(173, 165, 165);
+
+    animation-name: girar;
+    animation-duration:2s;  
+    animation-iteration-count: infinite;  
+}
+
+@keyframes girar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.circle h2{
+    justify-content: center;
 }
 
 /*--------------footer----------------------*/

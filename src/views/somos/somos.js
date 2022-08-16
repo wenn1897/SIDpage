@@ -1,6 +1,6 @@
 import view from './somos.html';
 //mport members from '../../../img/user.png'
-import img from './user.png'
+//import img from './user.png'
 
 const members = [
     {
@@ -150,7 +150,7 @@ export default () => {
         elements.innerHTML += ` 
         <div class="target">
             <div class="front">
-                <img src= ${img} alt="user" class="">
+                <img src= ${member.img} alt="user" class="">
                 <h3 class="">${member.name} ${member.lastname}</h3>
             </div>
             <div class="back">
